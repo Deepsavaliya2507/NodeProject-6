@@ -7,7 +7,7 @@ const createUser = async (req, res) => {
     const reqBody = req.body;
 
     if (req.file) {
-      reqBody.user_image  = req.file.filename;
+      reqBody.user_image = req.file.filename;
     } else {
       throw new Error("Product image is required!");
     }

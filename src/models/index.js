@@ -1,2 +1,9 @@
 module.exports.User = require("./user.model");
 module.exports.Token = require("./token.model");
+module.exports.Banner = require("./banner.model");
+module.exports.Athlete = require("./athlete.model");
+module.exports.Team = require("./team.model");
+module.exports.Match = require("./match.model");
+module.exports.Season = require("./season.model");
+module.exports.Statistic = require("./statistics.model");
+module.exports.Ticket = require("./tickets.model");

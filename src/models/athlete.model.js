@@ -1,8 +1,7 @@
 const mongoose = require("mongoose");
-const bcrypt = require("bcryptjs");
 const config=require('../config/config');
 
-const userSchema = new mongoose.Schema(
+const athleteSchema = new mongoose.Schema(
   {
     first_name: {
       type: String,
@@ -12,20 +11,28 @@ const userSchema = new mongoose.Schema(
       type: String,
       trim: true,
     },
-    email: {
+    date_of_birth: {
       type: String,
       trim: true,
     },
-    password: {
+    nationality: {
       type: String,
+      trim: true,
     },
     role: {
       type: String,
       trim: true,
     },
-    user_image: {
+    contact_information: {
       type: String,
       trim: true,
+    },
+    join_date: {
+        type: String,
+        trim: true,
+    },
+    team: {
+      
     },
     is_active: {
       type: Boolean,
@@ -37,18 +44,13 @@ const userSchema = new mongoose.Schema(
     versionKey: false,
     toJSON: {
       transform: function (doc, data) {
-          if (data?.user_image) {
-          data.user_image = `${config.base_url}user_image/${data.user_image}`;
+          if (data?.athlete_image) {
+          data.athlete_image = `${config.base_url}athlete_image/${data.athlete_image}`;
           }
       },
   },
   }
 );
 
-// userSchema.pre("save", async function (next) {
-//   var salt = bcrypt.genSaltSync(8);
-//   this.password = await bcrypt.hash(this.password, salt);
-// });
-
-const User = mongoose.model("users", userSchema);
-module.exports = User;
+const Athlete = mongoose.model("athletes", athleteSchema);
+module.exports = Athlete;

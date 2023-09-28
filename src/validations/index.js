@@ -1,2 +1,9 @@
 module.exports.userValidation = require("./user.validation");
 module.exports.tokenValidation = require("./token.validation");
+module.exports.bannerValidation = require("./banner.validation");
+module.exports.athleteValidation = require("./athlete.validation");
+module.exports.teamValidation = require("./team.validation");
+module.exports.matchValidation = require("./match.validation");
+module.exports.seasonValidation = require("./season.validation");
+module.exports.statisticValidation = require("./statistic.validation");
+module.exports.ticketValidation = require("./ticket.validation");
